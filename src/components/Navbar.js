@@ -53,23 +53,23 @@ const menuItems = [
     {
         listIcon: <Home />,
         listText:"Home",
-        listPath: "/"
+        listPath: "/portfolio"
     },
     {
         listIcon: <AssignmentInd />,
         listText:"Resume",
-        listPath: "/resume"
+        listPath: "/portfolio/resume"
     },
     {
         listIcon: <Apps />,
         listText:"Portfolio",
-        listPath: "/portfolio"
+        listPath: "/portfolio/projects"
 
     },
     {
         listIcon: <ContactMail />,
         listText:"Contacts",
-        listPath: "/contacts"
+        listPath: "/portfolio/contacts"
     }
 ]
 
