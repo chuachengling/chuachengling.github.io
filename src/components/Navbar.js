@@ -58,18 +58,18 @@ const menuItems = [
     {
         listIcon: <AssignmentInd />,
         listText:"Resume",
-        listPath: "/portfolio/resume"
+        listPath: "/resume"
     },
     {
         listIcon: <Apps />,
         listText:"Portfolio",
-        listPath: "/portfolio/projects"
+        listPath: "/projects"
 
     },
     {
         listIcon: <ContactMail />,
         listText:"Contacts",
-        listPath: "/portfolio/contacts"
+        listPath: "/contacts"
     }
 ]
 

@@ -14,9 +14,9 @@ function App() {
     <>
     <CssBaseline/>
     <Route path = "/portfolio" component = {Home}/>
-    <Route path = "/portfolio/resume" component = {Resume}/>
-    <Route path = "/portfolio/projects" component = {Portfolio}/>
-    <Route path = "/portfolio/contacts" component = {Contacts}/>
+    <Route path = "/resume" component = {Resume}/>
+    <Route path = "/projects" component = {Portfolio}/>
+    <Route path = "/contacts" component = {Contacts}/>
     </>
   );
 } 
