@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.78ed104d.chunk.css",
-    "main.js": "/portfolio/static/js/main.5bdb1275.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.5bdb1275.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.8d169f6e.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.8d169f6e.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.8fed2963.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.8fed2963.js.map",
     "static/js/2.e1e9230a.chunk.js": "/portfolio/static/js/2.e1e9230a.chunk.js",
@@ -12,15 +12,15 @@
     "static/js/2.e1e9230a.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e1e9230a.chunk.js.LICENSE.txt",
     "static/media/avatar.8643305c.png": "/portfolio/static/media/avatar.8643305c.png",
     "static/media/App.css": "/portfolio/static/media/coffee-apple.02272115.jpg",
-    "static/media/html-css-javascript-lg.91568b14.jpg": "/portfolio/static/media/html-css-javascript-lg.91568b14.jpg",
-    "static/media/javascript-fullstack.f5822e7b.jpg": "/portfolio/static/media/javascript-fullstack.f5822e7b.jpg",
-    "static/media/mern-stack.64b9cbdd.jpg": "/portfolio/static/media/mern-stack.64b9cbdd.jpg",
-    "static/media/react-redux.fb61d456.jpg": "/portfolio/static/media/react-redux.fb61d456.jpg"
+    "static/media/cs2102_pcs.0ac899cd.jpg": "/portfolio/static/media/cs2102_pcs.0ac899cd.jpg",
+    "static/media/dsa3101.b3809a2d.png": "/portfolio/static/media/dsa3101.b3809a2d.png",
+    "static/media/fake_news.538930b6.jpg": "/portfolio/static/media/fake_news.538930b6.jpg",
+    "static/media/readbook.d195d9ff.jpg": "/portfolio/static/media/readbook.d195d9ff.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8fed2963.js",
     "static/js/2.e1e9230a.chunk.js",
     "static/css/main.78ed104d.chunk.css",
-    "static/js/main.5bdb1275.chunk.js"
+    "static/js/main.8d169f6e.chunk.js"
   ]
 }
