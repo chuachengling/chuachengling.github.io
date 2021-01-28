@@ -54,10 +54,10 @@ const Contacts = () => {
 
   const { register, handleSubmit, errors } = useForm();
 
-  const sendFeedback = (serviceID, templateId, variables) => {
+  const sendFeedback = (serviceID, templateId, variables, userID) => {
     emailjs.send(
         serviceID, templateId,
-        variables
+        variables, userID
     ).then(res => {
         console.log('Email successfully sent!')
     })
@@ -69,7 +69,8 @@ const Contacts = () => {
     const templateId = 'template_vw9a6a3';
     const serviceID = 'service_9rndepw';
     const newvar = { from_name: data.name, message_html: data.comment, reply_to: data.email };
-    sendFeedback(serviceID, templateId, newvar);
+    const uid = 'user_dS8u0MRcIhsCW0DEALomr';
+    sendFeedback(serviceID, templateId, newvar, uid);
     r.target.reset();
   };
   
