@@ -78,7 +78,7 @@ const Contacts = () => {
     <Box component="div" style={{ background: "#141424", height: "100vh" }}>
       <Navbar />
       <Grid container justify="center">
-        <Box component="form" className={classes.form}>
+        <Box className={classes.form}>
           <Typography
             variant="h5"
             style={{
@@ -139,9 +139,9 @@ const Contacts = () => {
                 {errors.comment && "oops, you forgot your message!"}<br />
 
                 <input type="submit" />
-            </form>
-        </Box>
-      </Grid>
+                </form>
+          </Box>
+        </Grid>
     </Box>
   );
 };
