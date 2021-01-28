@@ -131,9 +131,7 @@ const Resume = () => {
                 <Typography variant = "subtitle1" align="left" style = {{color:"#c5c6c7"}}>
                     <li>BondIT Global is a Fixed Income Asset Portfolio Management Company, utilising data for portfolio construction</li>
                     <br/>
-                    <li>I was in charge of leading a project to analyse Chinese News data and create a Natural Language Processing model to analyse market sentiment.</li>
-                    <br/>
-                    <li>I was also involved in their Quantitative Research Branch dealing with credit analysis of bonds.</li>
+                    <li>I am currently tasked with creating a Reinforcement Learning Algorithm for portfolio construction for the company.</li>
                 </Typography>
         </Box>
         </Box>
@@ -174,6 +172,21 @@ const Resume = () => {
                 <li>Worked on a dataset provided by Kantar (A data insights company) to create useful models and insights for FMCG data</li>    
                 <br/>
                 <li>Methods employed included RFM modelling, Customer Churn Prediction, Logistics Forecasting and Market Basket Analysis</li>   
+                </Typography>
+        </Box>
+            <Box 
+            component = "div" 
+            className={classes.timeLineItem}>
+                <Typography variant = "h5" align="center" className={classes.subHeading}>
+                    Pet Care Service Application
+                </Typography>
+                <Typography variant = "body1" align="center" style = {{color:"#45A29E"}}>
+                    National University of Singapore CS2102
+                </Typography>
+                <Typography variant = "subtitle1" align = "left" style = {{color:"#c5c6c7"}}>
+                <li>Created a web application using Flask frontend and Postgresql for an application.</li>    
+                <br/>
+                <li>The application allows users to sign in and update their pets, as well as for service providers to liaise with pet owners.</li>   
                 </Typography>
         </Box>
         <Typography variant = "h2" className = {`${classes.timeLineYear} ${classes.timeLineItem}`}>

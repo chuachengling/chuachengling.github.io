@@ -1,8 +1,16 @@
 import React from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import { TextField, Typography, Button, Grid, Box } from "@material-ui/core";
-import SendIcon from "@material-ui/icons/Send";
+import { makeStyles, 
+  // eslint-disable-next-line
+  withStyles } from "@material-ui/core/styles";
+import { 
+  // eslint-disable-next-line
+  TextField, Typography, 
+  // eslint-disable-next-line
+  Button, Grid, Box } from "@material-ui/core";
+//import SendIcon from "@material-ui/icons/Send";
 import Navbar from "./Navbar";
+import { useForm } from "react-hook-form";
+import * as emailjs from "emailjs-com";
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -13,88 +21,120 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginTop: "1rem",
-    color: "tomato",
-    borderColor: "tomato",
+    color: "#66fcf1",
+    borderColor: "#66fcf1",
   },
 }));
 
-const InputField = withStyles({
-  root: {
-    "& label.Mui-focused": {
-      color: "tomato",
-    },
-    "& label": {
-      color: "tan",
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "tan",
-      },
-      "&:hover fieldset": {
-        borderColor: "tan",
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "tan",
-      },
-    },
-  },
-})(TextField);
-
+// const InputField = withStyles({
+//   root: {
+//     "& label.Mui-focused": {
+//       color: "#66fcf1",
+//     },
+//     "& label": {
+//       color: "#C5C6C7",
+//     },
+//     "& .MuiOutlinedInput-root": {
+//       "& fieldset": {
+//         borderColor: "#C5C6C7",
+//       },
+//       "&:hover fieldset": {
+//         borderColor: "#C5C6C7",
+//       },
+//       "&.Mui-focused fieldset": {
+//         borderColor: "#C5C6C7",
+//       },
+//     },
+//   },
+// })(TextField);
+ 
 const Contacts = () => {
+  // eslint-disable-next-line
   const classes = useStyles();
+
+  const { register, handleSubmit, errors } = useForm();
+
+  const sendFeedback = (serviceID, templateId, variables) => {
+    emailjs.send(
+        serviceID, templateId,
+        variables
+    ).then(res => {
+        console.log('Email successfully sent!')
+    })
+        .catch(err => console.error('There has been an error.  Here some thoughts on the error that occured:', err))
+  };
+
+  const onSubmit = (data, r) => {
+    alert(`Thank you for your message from ${data.email}`);
+    const templateId = 'template_vw9a6a3';
+    const serviceID = 'service_9rndepw';
+    const newvar = { from_name: data.name, message_html: data.comment, reply_to: data.email };
+    sendFeedback(serviceID, templateId, newvar);
+    r.target.reset();
+  };
+  
 
   return (
     <Box component="div" style={{ background: "#141424", height: "100vh" }}>
       <Navbar />
       <Grid container justify="center">
-        <Box component="form" className={classes.form}>
+        {/* <Box component="form" className={classes.form}>
           <Typography
             variant="h5"
             style={{
-              color: "tomato",
+              color: "#66fcf1",
               textAlign: "center",
               textTransform: "uppercase",
             }}
           >
             hire or contact me...
-          </Typography>
-          <InputField
-            fullWidth={true}
-            label="Name"
-            variant="outlined"
-            inputProps={{ style: { color: "white" } }}
-            margin="dense"
-            size="medium"
-          />
-          <br />
+          </Typography> */}
 
-          <InputField
-            fullWidth={true}
-            label="Email"
-            variant="outlined"
-            inputProps={{ style: { color: "white" } }}
-            margin="dense"
-            size="medium"
-          />
-          <br />
-          <InputField
-            fullWidth={true}
-            label="Company name"
-            variant="outlined"
-            inputProps={{ style: { color: "white" } }}
-            margin="dense"
-            size="medium"
-          />
-          <br />
-          <Button
-            className={classes.button}
-            variant="outlined"
-            fullWidth={true}
-            endIcon={<SendIcon />}
-          >
-            contact me
-          </Button>
-        </Box>
+          <form onSubmit={handleSubmit(onSubmit)} autoComplete = "off">
+                <input 
+                    placeholder="name"
+                    name="name" 
+                    ref={
+                        register({ 
+                            required: "Please enter your name", 
+                            maxLength: {
+                                value: 20,
+                                message: "Please enter a name with fewer than 20 characters"
+                            } 
+                        })
+                    } 
+                /><br />
+                {errors.name && errors.name.message}<br />
+
+                <input
+                    placeholder="email"
+                    name="email"
+                    ref={
+                        register({
+                            required: "Please enter an email",
+                            pattern: {
+                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                message: "invalid email address"
+                            }
+                        })
+                    }
+                /><br/>
+                {errors.email && errors.email.message}<br />
+
+                <textarea 
+                    placeholder="comment"
+                    name="comment" 
+                    ref={
+                        register({
+                            required: true
+                        })
+                    } 
+                /><br />
+                {errors.comment && "oops, you forgot your message!"}<br />
+
+                <input type="submit" />
+            </form>
+        {/* </Box> */}
       </Grid>
     </Box>
   );

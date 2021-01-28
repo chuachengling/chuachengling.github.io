@@ -38,7 +38,7 @@ const Portfolio = () => {
         {/* Project 1 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
-            <CardActionArea>
+            <CardActionArea href="https://github.com/chuachengling/CS3244_Group10">
               <CardMedia
                 component="img"
                 alt="Project 1"
@@ -57,11 +57,8 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Live Demo
+              <Button size="small" color="primary" href="https://github.com/chuachengling/CS3244_Group10">
+                Check it out!
               </Button>
             </CardActions>
           </Card>
@@ -69,7 +66,7 @@ const Portfolio = () => {
         {/* Project 2 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
-            <CardActionArea>
+            <CardActionArea href = "https://github.com/CornCobs/DSA3101project">
               <CardMedia
                 component="img"
                 alt="Project 2"
@@ -88,11 +85,8 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Live Demo
+              <Button size="small" color="primary" href = "https://github.com/CornCobs/DSA3101project">
+                Check it out!
               </Button>
             </CardActions>
           </Card>
@@ -100,7 +94,7 @@ const Portfolio = () => {
         {/* Project 3 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
-            <CardActionArea>
+            <CardActionArea href = "https://pcs-service-2102.herokuapp.com/login">
               <CardMedia
                 component="img"
                 alt="Project 3"
@@ -119,11 +113,8 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Live Demo
+              <Button size="small" color="primary" href = "https://pcs-service-2102.herokuapp.com/login">
+                Check it out!
               </Button>
             </CardActions>
           </Card>
@@ -131,7 +122,7 @@ const Portfolio = () => {
         {/* Project 4 */}
         <Grid item xs={12} sm={8} md={6}>
           <Card className={classes.cardContainer}>
-            <CardActionArea>
+            <CardActionArea href = "https://readbook-1558942487585.firebaseapp.com/">
               <CardMedia
                 component="img"
                 alt="Project 4"
@@ -153,11 +144,8 @@ const Portfolio = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Live Demo
+              <Button size="small" color="primary" href = "https://readbook-1558942487585.firebaseapp.com/">
+                Check it out!
               </Button>
             </CardActions>
           </Card>
