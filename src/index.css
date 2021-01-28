@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.mainLoginInput::-webkit-input-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}
+
+.mainLoginInput:-ms-input-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}
+
+.mainLoginInput:-moz-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}
+
+.mainLoginInput::-moz-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}

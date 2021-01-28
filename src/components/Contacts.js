@@ -49,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
 // })(TextField);
  
 const Contacts = () => {
-  // eslint-disable-next-line
   const classes = useStyles();
 
   const { register, handleSubmit, errors } = useForm();
@@ -79,7 +78,7 @@ const Contacts = () => {
     <Box component="div" style={{ background: "#141424", height: "100vh" }}>
       <Navbar />
       <Grid container justify="center">
-        {/* <Box component="form" className={classes.form}>
+        <Box component="form" className={classes.form}>
           <Typography
             variant="h5"
             style={{
@@ -89,12 +88,14 @@ const Contacts = () => {
             }}
           >
             hire or contact me...
-          </Typography> */}
-
+          </Typography>
+          <br/>
           <form onSubmit={handleSubmit(onSubmit)} autoComplete = "off">
                 <input 
-                    placeholder="name"
+                    placeholder="Name"
+                    class = "mainLoginInput"
                     name="name" 
+                    style={{ width: "300px" ,font: "Arial"}}
                     ref={
                         register({ 
                             required: "Please enter your name", 
@@ -108,8 +109,10 @@ const Contacts = () => {
                 {errors.name && errors.name.message}<br />
 
                 <input
-                    placeholder="email"
+                    placeholder="E-mail"
+                    class = "mainLoginInput"
                     name="email"
+                    style={{ width: "300px" ,font: "Arial"}}
                     ref={
                         register({
                             required: "Please enter an email",
@@ -123,8 +126,10 @@ const Contacts = () => {
                 {errors.email && errors.email.message}<br />
 
                 <textarea 
-                    placeholder="comment"
+                    placeholder="Message"
+                    class = "mainLoginInput"
                     name="comment" 
+                    style={{ width: "300px" ,height: "100px",font: "Arial"}}
                     ref={
                         register({
                             required: true
@@ -135,7 +140,7 @@ const Contacts = () => {
 
                 <input type="submit" />
             </form>
-        {/* </Box> */}
+        </Box>
       </Grid>
     </Box>
   );
