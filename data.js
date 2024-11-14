@@ -1,7 +1,6 @@
 export const bio = [
   "Hello, my name is Cheng Ling.",
-  "I am a Full Stack Data Scientist with a strong passion for enhancing projects, optimizing performance, and driving efficient delivery.",
-  "I thrive on leveraging my technical expertise to elevate the quality and impact of the projects I work on.",
+  "I am a Full Stack Data Scientist with a strong passion for enhancing projects, optimizing performance, and driving efficient delivery. I thrive on leveraging my technical expertise to elevate the quality and impact of the projects I work on.",
   "In my free time, I am deeply fascinated by the world of mathematics and computer science problems and constantly seek opportunities to expand my knowledge in this field.",
   "It's a pleasure to connect—let's make something amazing together!",
 ];
