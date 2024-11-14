@@ -216,7 +216,7 @@ export const education = [
     icon: "graduation-cap",
   },
   {
-    title: "",
+    title: "NUS Overseas College",
     duration: "2020",
     subtitle: "Adelson School of Entrepreneurship",
     details: [],
