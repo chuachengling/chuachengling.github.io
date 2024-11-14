@@ -51,7 +51,7 @@ export const skills = [
 ];
 
 export const projects = {
-  webProjects: [
+  DataProjects: [
     {
       projectName: "Programming Diaries",
       image: "images/programmingdiaries.png",
@@ -109,24 +109,6 @@ export const projects = {
         "GUI to transfer data to excel sheets and generate bills on the local shops.",
       preview: "https://github.com/vinaysomawat/Bill-Generator",
       techStack: ["Tkinter", "Openxlpy", "Python"],
-    },
-  ],
-  androidProjects: [
-    {
-      projectName: "NITW-CSE",
-      image: "images/nitwcse.jpg",
-      summary:
-        "The Application display details of Department courses, reference books, research, publication and faculty profile.",
-      preview: "https://github.com/vinaysomawat/NITW-CSE",
-      techStack: ["JAVA", "XML", "Android"],
-    },
-    {
-      projectName: "CareerHigh-App",
-      image: "images/carrerhigh.png",
-      summary:
-        "The Application display the webpages of website careerhigh.in in android devices.",
-      preview: "https://github.com/vinaysomawat/CareerHigh-Android",
-      techStack: ["JAVA", "XML", "Android"],
     },
   ],
   freelanceProjects: [
@@ -219,28 +201,32 @@ export const experience = [
 
 export const education = [
   {
-    title: "B.Tech. in Computer Science and Engineering",
-    duration: "2016 - 2020",
-    subtitle: "National Institute of Technology, Warangal",
+    title: "B.Sc in Data Science",
+    duration: "2018 - 2022",
+    subtitle: "National University of Singapore",
     details: [],
     tags: [
       "Data Structures & Algorithms",
-      "Operating Systems",
+      "Data Science",
+      "Machine Learning",
       "Database Management System",
-      "Computer Networks",
-      "Compiler Designing",
-      "Cloud Computing",
+      "Artificial Intelligence",
+      "Big Data Systems",
     ],
     icon: "graduation-cap",
   },
   {
-    title: "Class 12th in Science and Mathematics",
-    duration: "",
-    subtitle: "Board of Secondary Education, Rajasthan",
+    title: "",
+    duration: "2020",
+    subtitle: "Adelson School of Entrepreneurship",
     details: [],
-    tags: ["Physics", "Chemistry", "Mathematics"],
+    tags: [
+      "NUS Overseas College",
+      "Entrepreneurship",
+      "Startups",
+    ],
     icon: "book",
-  },
+  }
 ];
 
 export const footer = [
