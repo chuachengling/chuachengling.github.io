@@ -472,7 +472,7 @@ import { URLs } from './user-data/urls.js';
   populateBio(bio, "bio");
     
   fetchBlogsFromMedium(medium);
-  fetchGitConnectedData(gitConnected);
+  // fetchGitConnectedData(gitConnected);
   
   populateProjects(webProjects, "web-projects");
   populateProjects(softwareProjects, "software-projects");
