@@ -51,7 +51,7 @@ export const skills = [
 ];
 
 export const projects = {
-  DataProjects: [
+  dataProjects: [
     {
       projectName: "Programming Diaries",
       image: "images/programmingdiaries.png",
@@ -267,28 +267,24 @@ export const footer = [
   {
     label: "Links",
     data: [
-    //   {
-    //     text: "Linkedin",
-    //     link: "https://www.linkedin.com/in/vinaysomawat/",
-    //   },
-    //   {
-    //     text: "Twitter",
-    //     link: "https://twitter.com/thesigmakid",
-    //   },
+      {
+        text: "Linkedin",
+        link: "https://www.linkedin.com/in/chuachengling/",
+      },
+      {
+        text: "Github",
+        link: "https://github.com/chuachengling",
+      },
       {
         text: "Buy me a coffee",
         link: "https://www.buymeacoffee.com/r194dME8y",
-      },
-      {
-        text: "Github/vinaysomawat.github.io",
-        link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
       },
     ],
   },
   {
     label: "copyright-text",
     data: [
-      "Made with &hearts; by Vinay Somawat.",
+      "Referenced from Vinay Somawat.",
       "&copy; No Copyrights. Feel free to use this template.",
     ],
   },

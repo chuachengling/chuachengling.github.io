@@ -7,9 +7,11 @@ import {
     footer,
   } from "./data.js";
 
+import CONFIG from "./config.js"
+
 import { URLs } from './user-data/urls.js';
   
-  const { webProjects, softwareProjects, freelanceProjects } =
+  const { dataProjects, softwareProjects, freelanceProjects } =
     projects;
   const { medium, gitConnected } = URLs;
   
@@ -469,12 +471,54 @@ import { URLs } from './user-data/urls.js';
     }
   }
   
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+        
+        const botToken = CONFIG.BOT_TOKEN;
+        const chatId = CONFIG.CHAT_ID;
+        
+        const text = `New Contact Form Submission:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+        
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: text,
+                }),
+            });
+            
+            if (response.ok) {
+                alert("Message sent successfully!");
+                form.reset();
+            } else {
+                alert("Failed to send message.");
+            }
+        } catch (error) {
+            alert("Error sending message.");
+            console.error("Error:", error);
+        }
+    });
+});
+
   populateBio(bio, "bio");
     
   fetchBlogsFromMedium(medium);
   // fetchGitConnectedData(gitConnected);
   
-  populateProjects(webProjects, "web-projects");
+  populateProjects(dataProjects, "web-projects");
   populateProjects(softwareProjects, "software-projects");
   populateProjects(freelanceProjects, "freelance-projects");
   
